@@ -11,5 +11,8 @@
         <module name="constants" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="constants" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

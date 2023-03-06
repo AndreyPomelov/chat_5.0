@@ -1,7 +1,7 @@
 package server;
 
 import server.authentication.AuthService;
-import server.authentication.SimpleAuthService;
+import server.authentication.DBAuthService;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -54,7 +54,7 @@ public class Server {
     private void runServer() throws IOException {
         server = new ServerSocket(PORT);
         System.out.printf("Сервер успешно запущен, порт %d.\n", PORT);
-        AuthService authService = new SimpleAuthService();
+        AuthService authService = new DBAuthService();
 
         // Цикл подключения клиентов (для каждого клиента создаётся свой экземпляр менеджера)
         while (true) {
